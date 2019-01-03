@@ -4,6 +4,10 @@
 		<title> Manju Shettar </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 		
 		<style>
 			.intro{
@@ -127,12 +131,13 @@ body {
   box-sizing: inherit;
   display: inline-block;
   font-size: 13pt;
-  transition: all .5s;
+  transition: all .7s;
   cursor: pointer;
-  background-color:black; }
+  color:white;
+  background-color:transparent; }
   .button:hover {
-    background-color: gray;
-    border-color: #04C2C9; }
+    background-color: black;
+    border-color: #E637C3; }
   .button .mdi {
     vertical-align: middle; }
 
@@ -154,7 +159,7 @@ body {
 
 
 .highlight {
-  color: #B156E4; }
+  color: #E637C3; }
 
 
 nav {
@@ -164,7 +169,7 @@ position: absolute;
 height: 50px;
 width: 100%;
 background: #1B242F;
-border-bottom: 3px solid #04C2C9;
+border-bottom: 3px solid #E637C3;;
 text-align: left;
 z-index: 99; }
 nav.fixed {
@@ -194,7 +199,7 @@ nav .link-wrap div {
   nav .link-wrap div:first-child {
 	padding: 25px 20px 12px 20px; }
   nav .link-wrap div:hover {
-	color: #E31B6D; }
+	color: #E637C3; }
 nav .mdi-menu {
 position: absolute;
 right: 5vw;
@@ -295,6 +300,12 @@ color: #E31B6D;
 		font-size: 32pt;
 		line-height: 36pt; 
 	}
+	h2{
+		text-align:center;
+	}
+	hr{
+		width: 40%;
+	}
 		</style>
 	</head>
 	<body>
@@ -318,10 +329,17 @@ color: #E31B6D;
 				
 				</div>
 				<div class = "button-page-link" dest = "about">
-					<button class = "button"> View my Work</button>	
-				
+					<a href = "#sec-1">
+						<button type = "button" class = "button"> <strong>My Work</strong>  <span class = "glyphicon glyphicon-hand-right"></span></button>	
+					</a>
 				</div>
-				<nav class = "flex desk"></nav>
+				<nav class = "flexdesk" id = "sec-1">
+					<ul class = "nav nav-pills">
+						<li role="presentation"><a href="#about-me">About Me</a></li>
+						<li role="presentation"><a href="#projects">Projects</a></li>
+						<li role="presentation"><a href="#resume">Resume</a></li>
+					</ul>
+				</nav>
 			</div>
 		
 		
@@ -329,11 +347,24 @@ color: #E31B6D;
 		
 		
 		
-		
-		
-		<div class = "intro">
-			<span>Hey! I'm <kbd>Manju Shettar</kbd>. <br> I'm a novice full-stack developer.</span>
+			<section id="about">
+    <div class="container flex" id = "about-me">
+
+      <div class="header waypoint animated slide-in-left">ABOUT ME </div>
+      <hr>
+      <div class = "row">
+		<div class="col-md-6">
+			<p> Hey </p>
 		</div>
+		<div class="col-md-6">
+			<p> hey </p>
+		</div>
+      </div>
+    </div>
+  </section>
+		
+		
+		
 	
 	
 	</body>
