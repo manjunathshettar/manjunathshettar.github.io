@@ -369,6 +369,31 @@ color: #E31B6D;
 		width:17%;
 		height:17%;
 	}
+	.thumbnail{
+		background-color:gray;
+	}
+	.btn{
+				background-color:black;
+				font-family: 'Oleo Script', cursive;
+				border-radius:50%;
+			}
+			@keyframes example{
+			  0%   {background-color:black; left:0px; top:0px; color: white;}
+			  50%  {background-color:white; left:00px; color: black; }
+			  100% {background-color:black; left:0px; top:0px; color: white;}
+			}
+			.btn:hover{
+				background-color:white;
+				color:black;
+				transition:translateX(50px);
+				animation-duration: 4s;
+				animation-name: example;
+				animation-iteration-count: infinite;
+				position:relative;
+			}
+			.resume{
+				background-color:#110303;
+			}
 		</style>
 	</head>
 	<body>
@@ -428,8 +453,7 @@ color: #E31B6D;
 			<br>
 			<span class = "green glyphicon glyphicon-user"> www.github.com/manjunathshettar </span>
 			<br>
-			<span class = "yellow glyphicon glyphicon-download-alt"> <a href ="https://standardresume.co/manjunathshettar">Resume</a></span>
-	 
+			<span class = "yellow glyphicon glyphicon-download-alt" id = "resume"> <a href ="https://standardresume.co/manjunathshettar">Resume</a></span>
 	  </section>
 		<section id = "fluency">
 			<div class = "row">
@@ -453,7 +477,7 @@ color: #E31B6D;
 		
 		<div class="column">
 		
-		  <h3 id = "section-3"> Projects </h3>
+		  <h3 id = "projects"> Projects </h3>
 		  
 		  <div class="col-sm-6 col-md-4">
 			
@@ -466,9 +490,8 @@ color: #E31B6D;
 				
 				<h3>Pong.java</h3>
 				
-				<p>A Pong game made using javax swing and Graphics. This is a multi-player game where player one can control the blue paddle with 
-				the arrow keys (right and left) and player two can control the red paddle with a for left and d for right. I am currently working
-				on creating a scoreboard for the game. </p>
+				<p>A Pong game made using javax swing and Graphics. This is a multi-player game where player one can control the blue paddle and player two can control
+				the red one.</p>
 			
 				<p> <span> </span><a href="https://github.com/manjunathshettar/Pong" class="btn btn-primary" role="button">Github</a> </p>
 			
@@ -495,7 +518,7 @@ color: #E31B6D;
 				
 				<p>I have made several succesful automation projects using Python so far. My most complex one has been a program that allows
 				the user to input a zip code and it takes them to the weather.com site of their zipcode. I am currently working on updating the interface
-				to display the information found on the website.</p>
+				to display the information found on the website by storing the info to a file.</p>
 				
 				<p><span></span><a href="https://github.com/manjunathshettar/WebScraping-Data-Science" class="btn btn-primary" role="button">Github</a></p>
 			  </div>
@@ -523,7 +546,8 @@ color: #E31B6D;
 				
 				<p>I have worked on creating simple electronic projects using Arduino UNO and circuit board logic. Using a 
 				derivative of C++, I coded the framework of the circuit boards to perform a certain task. I completed 
-				a project that reports the temperature of the air around a humidity and heat sensor and performed various tests.</p>
+				a project that reports the temperature of the air around a humidity and heat sensor and performed various tests. I am currently in 
+				the process of engineering a robot that drives along a path.</p>
 				
 				<p><span></span><a href="" class="btn btn-primary" role="button">Electrics </a></p>
 				
@@ -534,8 +558,6 @@ color: #E31B6D;
 		  </div>
 		  
 		</div>
-
-		
 	
 	
 	</body>
