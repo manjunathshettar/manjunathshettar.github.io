@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<title>Booleans</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:45%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:65%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Booleans</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> Booleans </h1> 
+			<hr>
+			
+			<div class = "w3-display-middle">
+				<p>
+					Can you think of a yes or no question? A yes or no question only has two acceptable outcomes: yes or no. Similarily, 
+					Java uses the boolean data type to represent true/false in terms of a variable.
+				</p>
+				<p>
+					When you declare a boolean; <kbd>boolean booleanVariable;</kbd>, the default value will be false. When you print out a boolean,
+					you will either get true or false. We can initialize a boolean like so; <kbd>boolean bool = true;</kbd> or <kbd>boolean bool = false;</kbd>.
+					Booleans are especially useful when we delve into the world of loops. 
+				</p> 
+				<p>
+					Try this; <kbd>System.out.println(true || false);</kbd>. Here, we seem to be printing some sort of output of two booleans;
+					of the false and true values. The <b>||</b> in between the booleans represents <b>or</b>. The output of the statement
+					will print either true or false. The or operator will print true if one of the booleans are true. If both are false, 'false' will
+					be printed. If both are true, 'true' will be printed. 
+				</p>
+				<p>
+					Now try this; <kbd>System.out.println(true && false);</kbd>. You should've gotten false. This is the <b>and</b> operator. 
+					The and operator will only return true if both conditionals are true. If both are false, even if one is false, the statement 
+					will return false.  
+				</p>
+				<p>
+					What is short-circuiting? Well, let's look at the or operator. <kbd>true || false</kbd>. Since the or operator only requires
+					one of the booleans to be true to return true, we can look at the first variable, true, and see that the operation will
+					return true. However, if the operation is; <kbd>false || true</kbd>, we have to look at both variables. 
+				</p>
+				<p>
+					Short-circuiting works with the and operator as well. If we have; <kbd>false && true</kbd>, it won't matter what the second 
+					variable is, since the and operator requires two trues to return a true. We can look at the first variable and immediately tell
+					that the statement will return false. Now, if we have <kbd>true && true</kbd>, we'll have to check both variables to ensure
+					that they are both two. 
+				</p>
+				 <div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Print true (without using a String) by using the or operator.
+												  Print false (without using a String) by using the and operator.
+												  Use short-circuiting to print false using the "and" and the "or" operators.
+						
+						
+					</p>
+				</div>
+				 <nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="for.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="strings.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+			
+			
+			
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>
+

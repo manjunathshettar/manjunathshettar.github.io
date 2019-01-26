@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<title>Hello World </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:59%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:90%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Hello World.</div>
+		  </div>
+		</div>
+		
+	<div class = "w3-display-container  w3-animate-bottom">
+		<h1> Hello World </h1> 
+		<hr>
+		
+		
+		<div class = "w3-display-middle">
+			<p>
+				Hello World is one of the most popular and also one of the most easiest methods to introduce first-time programmers to 
+				the complicated world of coding. The progammer has to manipulate the <i>System</i> in order to see text on the screen. Let's jump 
+				into it!
+			</p>
+			<p>
+				First, let's get set up. In your text editor/IDE, type <kbd> public class First</kbd> followed by an open bracket, {. 
+				This is the class in which you will be working in. Now, save the file as First.java. If you save the file as anything other than
+				First.java, the program will not compile and fail to run. Make sure your class name and the File name are the <i> exact same.</i>
+			</p>
+			<p>
+				Next, you'll want to type this; <kbd>public static void main(String[]args){</kbd>. This is your main method.
+				When a program is compiled and ran, your main method will be the first method to be executed. It's important that you 
+				copy the statement word for word, else your program may not compile. We're finally getting ready to actually code!
+			</p>
+			<p>
+				Time to code! Type: <kbd>System.out.print("Hello World!");</kbd>. Compile and run the program. Got an error? That's because we
+				forgot to close the brackets for the method and class! If we don't encapsulate our methods with brackets, Java won't know
+				when that method begins or ends. Add a closing bracket, } , after the print statement to close the method. Add another closing bracket
+				after everything, to close the class. Compile the program and run it again. If everything worked out correctly, you should see <b>Hello World!</b> as your output. 
+			</p>
+			<p>
+				Let's break the code down. When we type <i>System.out</i>, we are actually using a library that java is already installed with. 
+				Other libraries, like the Math library need to be imported. We aren't using math however, so let's go back to the code. The .print
+				portion of the code is one of the System's methods. It prints everything between the parentheses as output. We need quotations around
+				<i>Hello World!</i> since Hello World! is a string. We'll learn more about Strings later. Finally, the semi-colon is Java's way of knowing when
+				a line terminates or ends. 
+			</p>
+			<p>
+				Not too shabby! Now, let's get complicated. Let's double our printing! After the print statement, but before the closing bracket
+				of the method, add <kbd>System.out.print("Goodbye World!");</kbd>. Done. But, when you compile and run the program, you'll see 
+				something's off. The two print statements are connected! Can you think of why? That's right! We are using the simple .print() method 
+				that will print on the same line. Let's change the .print() to <kbd>.println()</kbd> for both print statements. After we run the
+				program, we'll see that the statements are now on different lines. The reason for this is that the println() method adds a <kbd>\n</kbd>
+				after each line, essentially pressing "enter" on your keyboard.
+			</p>
+			<p>
+				Sure, you could choose to use the plain print() method and add a \n after every statement to create a new line. But that's 
+				far too exhausting and we're all about efficiency. Proffesional programmers will use println() nearly all of the time. Seriously.
+			</p>
+			
+			<p>
+				Pat yourself on the back! That was pretty simple, right? In our next lesson, we'll begin to look at variables and declarations. 
+				Stay tuned!
+			</p>
+			<div class="alert alert-info" role="alert">
+				<p>
+					<b>Challenge Problem</b>: Print your first and last name on a single line with no space in between them. 
+									   Print your first and last name on a single line with a space in between them. 
+									   Print your first and last name on two seperate lines.
+				</p>
+			</div>
+			<nav aria-label="...">
+		  <ul class="pager">
+			<li class="previous"><a href="variable.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+			<li class="next"><a href="learn.html">Home <span aria-hidden="true">&rarr;</span></a></li>
+		  </ul>
+		</nav>
+		</div>
+			
+		</div>
+		
+	<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>

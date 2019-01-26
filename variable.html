@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>Variables & Declarations </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:45%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:65%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Variables and Declarations</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> Variables </h1> 
+			<hr>
+			<div class = "w3-display-middle">
+				<p> 
+					Variables are nifty and fun. But what exactly is a variable? Well, in math, a variable is usually a placeholder for a number.
+					In programming, variables can be used for numbers, words, letters, and conditionals! A variable is something programmers use
+					to save time. Let's say I want to use the number <kbd>3.14159265359</kbd> in my program 20 times. I'm not going to type that number
+					out 20 times! Instead, I'll store that number into a variable and type that variable name 20 times, which is bound to save me 
+					time.
+				</p>
+				<p>
+					So know that you know what we use variables for, let's get into it. Let's start of by declaring a number. Let's use the Integer 
+					class, a class that can only hold <i> whole numbers</i>. In your main method, type <kbd>int variable;</kbd>. We've done it! We've 
+					declared a variable. Print the variable out using this statement; <kbd>System.out.println(variable);</kbd>. What did you get? If you got zero, 
+					you're correct. Since we never specified the value for our variable, Java defaults our variable, and all Integers, to the value of
+					zero. Let's change that. 
+				</p>
+				<p>
+					Underneath the print statement, type <kbd>variable = 5;</kbd>. Print the value of variable one more time, and you should see 
+					that the new value of variable is 5. Amazing! This second step, where we actually assign a value is called <i>initilization</i>
+					and the first step is called <i>declaration</i>. We can do this nifty trick for all future data types we learn!
+				</p>
+				<p>
+					Can we make this more efficient, though? The answer is yes! We can combine the declaration and initilziation into one step like this;
+					<kbd>int variable = 5;</kbd>. Amazing right? Go ahead and create five more integer variables and print them to the terminal. Remember
+					that you must have the "int" before the variable name to declare an Integer variable. Also note that the minimum and maximum values
+					an Integer variable can handle is -2^31 and 2^31-1 respectively. 
+				</p>
+				<div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Declare an integer variable that is named "variable".
+												  Initialize that variable to have a value of 3660.
+												  Print variable out to the terminal.
+												  Declare an integer with the name "var2" and initialize it with a value of 23 on the same line.
+												  Print var2 out to the terminal.
+												  I
+					</p>
+				</div>
+				<nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="numbers.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="helloworld.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>

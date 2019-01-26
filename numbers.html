@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>Integers v.s. Doubles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:45%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:85%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Datatype - Numbers</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> Numbers </h1> 
+			<hr>
+			
+			<div class = "w3-display-middle">
+				<p>
+					Numbers are fun to play around in Java. We have whole numbers - integers and decimals - doubles. We've already taken a peek
+					at Integers, so let's look at doubles first.
+				 </p>
+				 <p>
+					A <i>double</i> is an integer. If asked, you should know that a double takes up 64 bits of data, while an Integer will take
+					32 bits. A variable of the Double data type is initialized like that of the Integer data type: <kbd>double variableName = 3.14</kbd>.
+					A double <b>always</b> has to have a value after its decimal point. Otherwise, Java will think you are assigning an Integer directly
+					to a Double variable. Is that possible?
+				 </p>
+				 <p>
+					Actually, it is possible. By declaring a <i>Double object</i>, we can use a method of the Double object to turn an Integers 
+					into a decimal. <kbd>Double var = new Double(100);</kbd>. In this statement, 100 is our integer. We are casting the Integer
+					into a Double object, giving us a Double. We can also use the .valueOf() method; <kbd> Double var2 = Double.valueOf(100);</kbd> will
+					result in the same exact thing. Double.valueOf() is a method that returns the decimal version of the inputted Integer.
+				 </p>
+				 <p>
+					Now we know how to go from Integer to Double, now how about Double to Integer? It's fairly simple. Let's say we have this;
+					<kbd>double doubleVar = 33.444;</kbd>. Now, let's do this: <kbd>int newVariable = (int)(doubleVar);</kbd>. Our code is
+					taking the doubleVar we had initialized previously and forcing it to become an integer. When we do this, the decimal places are
+					truncated and no rounding occurs. 
+				 </p>
+				 <p>
+					The range of a double variable is ±1.79769313486231570E+308. That's pretty impressive and more than enough for our needs. It's
+					hard to imagine someone using that large/small of a number! We'll get into more methods of the Double object when we are introduced
+					to Strings and their methods. 
+				 </p>
+				 <p>
+					And finally, the Integer. Possibly the second most used data type in Java, second only to the boolean, and one of the most useful.
+					Integers are essentially doubles, but without the decimals. Integer-Integer operations will always result in an Integer.
+					Likewise, Double-Double operations will always result in a Double. A Double-Integer operation will result in a double, however,
+					as the program tries to promote the Integer into a Double. 
+				 </p>
+				 <p>
+					Remember libraries from lesson 1? Well, we're getting back into them. At the very top of your file, even before your class
+					declaration, type in: <kbd>import java.lang.Math;</kbd>. This imports the Math library to your file. We're only going focus on 
+					one method from the Math class, but if you want, you can always go to Oracle's API to view all of the Math methods. 
+				 </p>
+				 <p>
+					Math.random is in our spotlight. Here is the ideal usage of the .random method: <kbd>(Math.random()*range)+minimum</kbd>. 
+					The range is simply your maximum subtracted by your minimum and then subtracted again by 1. Your minimum is, well, your minimum.
+					This method will return a double. If you want it to return an Integer, we can cast the whole operation like so; <kbd>int variable = (int)(Math.random()*range)+minimum;</kbd>.
+				 </p>
+				 <div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Declare and initialize an integer variable with the value of 5 on a single line.
+												  Declare and initialize a double variable with a value of 33.3 on a single line.
+												  Using a print statement, add the integer and double variable together and observe the result.
+												  Use Math.random() to create a random integer from the range 2-8.
+						
+						
+					</p>
+				</div>
+				 <nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="strings.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="variable.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+			
+			
+			
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>

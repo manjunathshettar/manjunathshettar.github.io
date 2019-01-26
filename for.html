@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>For Loops</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:45%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:65%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">For Loops</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> For Loops </h1> 
+			<hr>
+			
+			<div class = "w3-display-middle">
+				<p>
+					Can you think of the easiest way to print out all of the numbers in range 1-40 to the terminal? Sure, you could use 40 different
+					print statements and copy-paste the same <kbd>System.out.println(num);</kbd> 40 times. There's a simpler way, however, and it comes 
+					in the form of for loops.
+				</p>
+				<p>
+					Before explaining what a for loop actually does, let's look at the syntax of the strucutre. <kbd>for(int i = 0; i < max-1; i++){ //do something }</kbd>.
+					Notice the lack of a semicolon after the header of the for loop. If you do add a semi-colon, you will experience many errors! Let's
+					start with the first word; 'for'. This lets Java know that you are creating a for loop. The next part declares and initializes 
+					an integer variable with the value of 0. Let's think about this; we know that Java counts from 0 instead of 1, so it makes sense
+					that our initial value would be 0.
+				</p>
+				<p>
+					The next part is the conditional part, or the boolean-part. The loop will continue to run as long as the second-part is true. 
+					The code reads; <kbd>i < max-1 ;</kbd>. This means that the code will keep running as long as i is less than one less than the maximum value. 
+					The conditional is read before the Thread actually goes into the loop, so make sure your coniditionals are accurate.
+				</p>
+				<p>
+					The last part is the incrementation part. We'll get into incrementation later, but for now, just know that Java is incrementing
+					i by one everytime the loop completes. If we tie it all togther, we realize that i will eventually reach our max value, since we are
+					incrementing i. 
+				</p>
+				<p>
+					So, let's get printing! Let's print out all of the numbers in the 3 - 9 range. First; the header of the loop: 
+					<kbd>for(int i = 3; i < 10; i++){</kbd>. Did you get that? Since we are starting at 3, we have to initialize i to start at 3.
+					Also, since we want to end at 9, we have to make sure that i is always less than 10. An alternate header would be;
+					<kbd>for(int i = 3; i<=9; i++){</kbd>, the <= refers to less than or equal to. 
+				</p>
+				<p>
+					Now, print i to the terminal by using <kbd>.println();</kbd>. Sit back and watch as your program spits out the numbers! You 
+					just created your first for loop and avoided writing over 9 lines of code!
+				</p>
+				 <div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Print all numbers in the domain; 10-20, exclusive. Print all numbers in the domain 0 - 3, inclusive.
+						Print 10 strings using a for loop. 
+						
+						
+					</p>
+				</div>
+				 <nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="while.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="boolean.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+			
+			
+			
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>
+
+

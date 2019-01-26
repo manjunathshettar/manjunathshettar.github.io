@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>While Loops</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:60%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:65%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">While Loops</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> While Loops </h1> 
+			<hr>
+			
+			<div class = "w3-display-middle">
+				<p>
+					The while loop is like the for loop's less liked brother. It isn't as efficient as the for loop, but it still
+					gets the job done. Let's look at the syntax
+				</p>
+				<p>
+					<kbd>while(i < max){ //do something; i = i +1;}</kbd>. Let's look at this code. You obviously have to include the 
+					'while' for Java to recognize that you are, in fact, writing a while loop. Inside the parentheses, you need to have a 
+					conditional that will be false at one point. In this example, we are looping as long as i is less than max. Since we are
+					incrementing i at the end of the loop (i = i+1;), i will eventually reach the max value. Once it does, the loop breaks 
+					off. If you don't make it so that your conditional will eventually become false (or true, in some cases), you will
+					get a StackOverflow error. 
+				</p>
+				<p>
+					You have to initialize and declare i outside of the while loop header. This is where the while loop falls off. The for
+					loop allows you to initialize & declare, increment and condition-check all in one line. In a while loop, you're forced to seperate 
+					them. 
+				</p>
+				<p>
+					So, what are the benefits of using a fwhile loop over a for loop? Well, there really aren't any. Sure, if you're 
+					limited to only using while loops, a while loop is clearly the better choice. If you want to practice incrementation and
+					conditionals, then a while loop will be good for practice. Other than that, a for loop is far more efficient, quicker and beginner
+					friendly.
+				</p>
+				<p>
+					There are a lot of common mistakes that even experienced programmers make when they attempt to code while loops. Putting a 
+					semicolon like so; <kbd>while(//some statement);</kbd> will give you a large amount of errors. Not allowing the conditional
+					to trend to being true/false (depending on your conditional) will give you a StackOverflow error; where the program runs 
+					infinitely. Probably the most common error is remembering that you have to declare and initialize the variable before the
+					while loop header. 
+				
+				</p>
+				 <div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Use a while loop to print "Hello" five times. Take the for loop you wrote in the for-loop practice problem 
+						and convert it into a while loop. 
+						
+						
+					</p>
+				</div>
+				 <nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="if.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="while.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+			
+			
+			
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>
+
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>Strings & Characters</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:35%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:120%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Strings and Characters</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> Strings </h1> 
+			<hr>
+			
+			<div class = "w3-display-middle">
+				<p>
+					Strings and characters are strategic ways to implement words and letters into Java. Technically, a String is made
+					out of several characters. For example, character 's' would be the "zero-th" index of the string "school", since Java 
+					counts from 0. However, if we break apart the String, we'll find that the zero-th index of a String will actually return a String.
+				</p>
+				<p>
+					Let's initialize our String; <kbd>String testString = new String("Testing");</kbd>. Notice how we have to use the <i>new</i>
+					operator, which we didn't use in Integers, doubles or booleans. When we initialize a String using this method, a new object is being
+					created. If we want a literal String, we can do this: <kbd>String literal = "Literally";</kbd>. Both strings work in the exact same
+					dynamic, except the first method is creating a new Object of the value String. The literal is simply pointing to the memory space 
+					that has "Literally" in it. 
+				</p>
+				<p>
+					If we want to print out a String, all we have to do is: <kbd>System.out.println(testString);</kbd>. Let's look into some
+					String methods. What if we want to print out the first letter of "pizza". Since Java starts counting from 0, we can use the 
+					substring() method to slice out the p from pizza. Here's how to do it; <kbd>System.out.println(new String("pizza").substring(0,1));</kbd>.
+					Looking at the code, it may seem like "pi" was supposed to print, since we included both 0 and 1 in the arguments. However,
+					the substring method will cut off the letter at the second index, so "i" was cut off, and we got "p". You can also print
+					"zza" by doing <kbd>System.out.println(new String("pizza").substring(2));</kbd>. This print statement will print everything from
+					the second index onwards.
+				</p>
+				<p>
+					Let's look at another String method, length(). .length() does exactly what you would expect - it returns the length of the String.
+					Try this: <kbd>System.out.println(new String("hello").length());</kbd>. You should get the length of the String hello. Remember that
+					the length() function is a method for a String. This will come in handy when we learn about arrays.
+				</p>
+				<p>
+					Finally, we can look at the .equals() method. Later on in this course, you'll learn that we can check if two variables are equal
+					with the == (equals) operator. However, it doesn't work like that for Strings. Strings, and all Objects, are stored in a memory heap.
+					When we do <kbd>stringOne == stringTwo</kbd>, we are just comparing the <i>memory locations for those two objects.</i> If we want
+					to compare the values, we have to use the .equals() method like so; <kbd>stringOne.equals(stringTwo)</kbd>. If they are equal, the
+					method will return true. 
+				</p>
+				<p>
+					Now let's talk about characters. While a String is an object, a character, like all of the other data types we have learned, is not
+					a primitive data type (not an object). This means we won't have to use the new operator to declare and initialize a character
+					variable. <kbd>char c = 'd';</kbd>. A character variable is symbolized with the word "char" and the <i>single quotations</i>. If you
+					use the double quotations, Java will think you are trying to stuff a String into a character data type, which isn't possible.
+				</p>
+				
+				<img src = "ascii.png">
+				
+				<p>
+					Take a look at this table. It's known as an ASCII table. The Decimal numbers on the left hand side can be substituted for the
+					Char values on the right. Let's take a look on how to implement this. <kbd>char c = 'A';</kbd>. This code gives the variable
+					<i>c</i> a value of 'A'. We can also do this, <kbd>char c = 65;</kbd> Yup, we can plug a number into a character data type to 
+					get the value of the char on the ASCII table.
+				</p>
+				<div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Create a String object using the new operator and print it to the terminal.
+						Create a literal string and print it out. Store the length of both Strings in two different integers and print them out.
+						Create a character variable and print it out. 
+						
+						
+					</p>
+				</div>
+				<nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="boolean.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="numbers.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+					
+				</div>
+				 
+			</div>
+			
+			
+			
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>
+
+
+
