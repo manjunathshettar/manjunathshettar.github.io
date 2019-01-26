@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<title>While Loops</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-top{background-color:black; color:white;}
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+span {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+span:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+img{
+	transform:rotate(270deg);
+	border-radius:50%;
+}
+.w3-container{
+	padding-left:45%;
+	padding-top: 7%;
+}
+hr{
+	width:60%;
+}
+.w3-display-container{
+	padding-left:45%;
+	padding-right:30%;
+	padding-top:5%;
+	
+}
+.w3-display-middle{
+	padding-top:65%;
+}
+</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">While Loops</div>
+		  </div>
+		</div>
+		
+		
+		<div class = "w3-display-container  w3-animate-bottom">
+			<h1> While Loops </h1> 
+			<hr>
+			
+			<div class = "w3-display-middle">
+				<p>
+					Let's say you want to decide what to do based on a condition. If the sun is out, we'll go outside for a walk. If not, we'll
+					just stay inside and watch Netflix. We can use if-else blocks in Java to tackle this.
+					</p>
+				<p>
+					Create an integer, <kbd>int value = 14;</kbd>. Now type in: <kbd>if(value < 15){</kbd>. The <i>if</i> keyword denotes 
+					a if block. Now, after the open bracket, print out the value. Remember to close the block! Run the code and you should see that the value of value was 
+					printed to the terminal. This is because value is less than 15. If we change value to be 20 and run the code again, you'll 
+					see that value doesn't actually print. This is because it is now greater than 15. 
+				</p>
+				<p>
+					Now type in this: <kbd>else{ System.out.println("Your value is greater than or equal to 15!"); }</kbd>. Run it again with value
+					being 20. Notice what happens? If the conditionals doesn't hold true for the if block, the Thread will skip to the 
+					else block and run whatever happens there. You can have an if block without an else block, but you cannot have an else block
+					without an if block.
+				</p>
+				<p>
+					Another part of the if-else concept is the <i>else if</i>. Let's keep the value of value at 20. Below the if block, but above
+					the else block write <kbd>else if(value > 15){System.out.println("Challenge completed!"); }</kbd>. Since the value of value is 20, and thus greater
+					than 15, we'll see that the code in our else if block is printed. The else if block will be printed if the code in the if block fails
+					and the conditional in the else if block is true. You can have multiple else if blocks to test for all conditionals, but you can
+					only have one if and else block.
+				</p>
+				 <div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Create a boolean and give it a value of false. Now, create an if-else structure that
+						prints "Hello" if the boolean is true and "GoodBye" if the value of the boolean is false. Can you do this with only
+						one if block and no else/else if's?
+						
+						
+					</p>
+				</div>
+				 <nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="if.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="while.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+			
+			
+			
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>
+
+
+
