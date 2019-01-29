@@ -18,47 +18,85 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-.w3-top{background-color:black; color:white;}
+	<style>
+body,h1,h2,h3,h4,h5,h6,p {font-family: "Karma", sans-serif}
+
+.w3-top{background-color:black; color:white; } <!-- POSITION ABSOLUTE!!! -->
 .w3-top .w3-right{ background-color:black; color:white;}
 .w3-top .w3-center{background-color:black; color:white;}
 .w3-top .w3-button{background-color:black; color:white;}
-span {
-  
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-          transition:         transform .8s ease-in-out;
-}
-span:hover {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-img{
-	transform:rotate(270deg);
-	border-radius:50%;
-}
-</style>
-<body>
+		.img{
+			-webkit-transform: rotate(270deg);
+			border-radius:50%;
+		}
+		.wrapper{
+			display:grid;
+			grid-template-columns:100%;
+			grid-column-gap:1em;
+			grid-row-gap:1em;
+		}
+		.wrapper > div{
+			background:white;
+			padding:1em;
+		}
+		.wrapper >div:nth-child(odd){
+			background:#ddd;
+		}
+		.wrapper2{
+			display:grid;
+			grid-template-columns:33% 33% 30%;
+			grid-column-gap:1em;
+			grid-row-gap:1em;
+		}
+		.wrapper2 > div:nth-child(even){
+			background:#eee;
+		}
+		.how{
+			text-align:center;
+			
+		}
+		.wrapper3{
+			display:grid;
+			grid-template-rows:50% 47.5%;
+			grid-column-gap:1em;
+			grid-row-gap:1em;
+		}
+		.wrapper3 >div{
+			background:#eee;
+		}
+		.wrapper5{
+			display:grid;
+			grid-template-rows:30% 45% 20.5%;
+			grid-column-gap:1em;
+			grid-row-gap:1em;
+		}
+		.wrapper5 >div{
+			background:#eee;
+		}
+		.wrapper4{
+			display:grid;
+			grid-template-columns:25% 25% 25% 25%;
+			grid-c
+			grid-row-gap:1em;
+		}
+	</style>
+</head>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+<body>
+	<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
   <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
-
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-center w3-padding-16">Master Programming!</div>
-  </div>
-</div>
-  
-<!-- !PAGE CONTENT! -->
+<div class = "wrapper">
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Master Programming!</div>
+		  </div>
+		</div>
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px" id = "home">
 	<!-- First Row 
 	<div class="w3-row-padding w3-padding-16 w3-center w3-animate-left" id="food">
@@ -86,8 +124,8 @@ img{
   </div>-->
   <!-- Second Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center w3-animate-left" id="food">
-    <div class="w3-quarter">
-      <a href = "pages/if.html"><span class = "glyphicon glyphicon-hand-up"></span></a>
+    <div class="pages/if.html">
+      <span class = "glyphicon glyphicon-hand-up"></span>
       <h3>If-Else Blocks</h3>
       <p>Learn how to tackle conditions with several outcomes.</p>
     </div>
@@ -147,11 +185,50 @@ img{
     </div>
   </div>
   
-	<hr>
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center"> 
+
+		</div>
+	</div>
+<div class = "wrapper2">
+	<div class = "wrapper5">
+	<div class = "how">
+		<h4><b>~Experience~</b></h4>
+		<div class = "wrapper4">
+		<p>HTML</p>
+		<p>CSS</p>
+		<p>JavaScript</p>
+		<p>Java</p>
+		<p>Python</p>
+		<p>C++</p>
+		<p>Bootstrap</p>
+		<p>Office</p>
+		<p>Arduino</p>
+		<p>MacOS</p>
+		<p>Windows</p>
+		<p>Git</p>
+		<p>Github</p>
+		<p>Photoshop</p>
+		<p>Google Studio</p>
+		<p>iMovie</p>
+		</div>
+	</div>
+	<div class = "how">
+		<h4><b>~References~</b></h4>
+		<p><a href = "https://stackoverflow.com/">Solution Forums</a></p>
+		<p><a href = "https://www.hackerrank.com">Competitve Programming</a></p>
+		<p><a href = "https://www.usaco.org">National Programming Competition</a></p>
+		<p><a href = "https://www.java.com/en/download/">Download Java</a></p>
+		<p><a href = "https://www.eclipse.org/downloads/">Download Eclipse</a></p>
+		<p><a href = "https://www.dailycodingproblem.com/">Daily Coding Problems (Algorithms)</a></p>
+		<p><a href = "https://www.youtube.com/watch?v=grEKMHGYyns&ab_channel=freeCodeCamp.org">FreeCodeCamp's Java Tutorial</a></p>
+	</div>
+	<div class = "how">
+		<hr><hr>
+		<h4>Copyright 2019</h4> 
+	</div>
+	</div>
+	<div class="w3-container w3-padding-32 w3-center"> 
     <h3  id="about"><b>About Me</b></h3><br>
-    <img src="woofwoof.jpg" alt="Me" class="w3-spin" style="display:block;margin:auto" width="200" height="200">
+    <img src="woofwoof.jpg" alt="Me" class = "img" style="display:block;margin:auto" width="200" height="200">
     <div class="w3-padding-32">
 		
       <h4><b>~ Manju Shettar ~</b></h4>
@@ -164,36 +241,27 @@ img{
 	  </p>
     </div>
   </div>
-  <hr>
-  
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32" id = "contact">
-    <div class="w3-third">
-      <h3>CONTACT ME</h3>
-      <p>You can shoot me an email at <strong>@m4nju5hett4r@gmail.com</strong> with suggestions or additions!</p>
-    </div>
-  
-    <div class="w3-third">
-      <h3>MORE</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <span class="w3-large">Visit my <a href = "https://manjshettar.wixsite.com/blog">blog</a>!</span><br>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <p class="w3-tag w3-black w3-margin-bottom">Coding</p> <p class="w3-tag w3-black w3-margin-bottom">Programming</p> 
-        <p class="w3-tag w3-black w3-margin-bottom">Java</p> <p class="w3-tag w3-black w3-margin-bottom">Learn</p> 
-        <p class="w3-tag w3-black w3-margin-bottom">Learn</p> <p class="w3-tag w3-black w3-margin-bottom">Introduction</p> 
-      </p>
-    </div>
-  </footer>
-
-<!-- End page content -->
+  <div class = "wrapper3">
+  <div class = "how">
+	<h4><b>~How to use this Course~</b></h4>
+	<hr>
+	
+	<p>
+		This course is fairly straightforward. If you are just beginning programming in Java or need to touch up on your skills, you should start
+		at the bottom (Hello World) and move upwards. As the course progresses, keep in mind that skills from previous lessons may carry over. It's
+		important that you practice to gain knowledge, not to finish the course. Make sure to be adamant. Some of these problems are tough and don't
+		resort to online sources (i.e. StackOverflow) for help until you're absolutely on your last straw. Good luck!
+	</p>
+  </div>
+  <div class = "how">
+	<h4><b>~Social Media/Links~</b></h4>
+	<span class = "glyphicon glyphicon-tag"> GitHub: www.github.com/manjunathshettar</span>
+	<span class = "glyphicon glyphicon-tag"> Blog: https://manjshettar.wixsite.com/blog</span>
+	<span class = "glyphicon glyphicon-tag"> Contact : manjshettar@gmail.com </span>
+  </div>
+  </div>
 </div>
+
 
 <script>
 // Script to open and close sidebar
@@ -205,7 +273,8 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
-</script>
-
+</script>	
 </body>
+
 </html>
+
