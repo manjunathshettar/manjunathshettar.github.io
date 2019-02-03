@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<title>Operations & Operators</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6,p {font-family: "Karma", sans-serif}
+
+.w3-top{background-color:black; color:white; } <!-- POSITION ABSOLUTE!!! -->
+.w3-top .w3-right{ background-color:black; color:white;}
+.w3-top .w3-center{background-color:black; color:white;}
+.w3-top .w3-button{background-color:black; color:white;}
+		.wrapper{
+			display:grid;
+			grid-template-columns:100%;
+			grid-column-gap:1em;
+			grid-row-gap:5em;
+			
+		}
+		.wrapper > div{
+			background:white;
+			padding:1em;
+		}
+		
+		.wrapper2{
+			display:grid;
+			grid-template-columns:20% 60% 20%;
+			grid-row-gap:1em;
+		}
+		.wrapper2 > div:nth-child(even){
+			background:#eee;
+		}
+		.how{
+			text-align:center;
+			display:grid;
+			grid-template-columns:20% 60% 20%;		
+		}
+		.wrapper3{
+			display:grid;
+			grid-template-rows:50% 47.5%;
+			grid-column-gap:1em;
+			grid-row-gap:1em;
+		}
+		.wrapper3 >div{
+			background:#eee;
+		}
+		.wrapper5{
+			display:grid;
+			grid-template-rows:30% 45% 20.5%;
+			grid-column-gap:1em;
+			grid-row-gap:1em;
+		}
+		.wrapper5 >div{
+			background:#eee;
+		}
+		.wrapper4{
+			display:grid;
+			grid-template-columns:25% 25% 25% 25%;
+			grid-c
+			grid-row-gap:1em;
+		}
+		.w3-row-padding span {
+  
+		  -webkit-transition: -webkit-transform .8s ease-in-out;
+				  transition:         transform .8s ease-in-out;
+		}	
+		.w3-row-padding span:hover {
+		  -webkit-transform: rotate(90deg);
+				  transform: rotate(90deg);
+		}
+		.bord{
+			border:1px solid #333;
+		}
+		
+	</style>
+	<body>
+		<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-bar-item w3-button"><span class = "glyphicon glyphicon-remove-circle"></span></a>
+		  <a href="learn.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="learn.html#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="learn.html#about" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+		</nav>
+<div class = "wrapper">
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+			<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+			<div class="w3-center w3-padding-16">Operations & Operators</div>
+		  </div>
+		</div>
+		<hr>
+		
+		<div class = "how w3-animate-bottom">
+			<div></div>
+			
+			<div class = "bord">
+				<p>
+					Let's assume that we have a bunch of items. We have apples, oranges and bananas. Now, we want to organize them and seperate them into 3 different bags. Obviously we cannot put an apple into the orange bag. So, each bag will represent a collection of different items. 
+                    
+				</p>
+				<p>
+					This is exactly what an array is. An array is a collection of variables of the same data type. Arrays are <i>very</i> useful and used in atleast 90% of all Java algorithms. To initialize an array, we can do one of two things. The first method assigns the array a length, but not the values inside it. <kbd>int[] arr = new int[<i>length</i>];</kbd>. This is an integer array, denoted by the <kbd>int[]</kbd>. A double array would be the same thing, except with a <kbd>double[]</kbd>. The number inside the brackets on the right hand side will denote how many elements can fit inside the array. This value is immutable, which means we cannot change the length of an array after we have assigned it. You can always go back to change the length in the initialization, though. 
+				</p>
+				<p>
+					The second way to create an array is as such; <kbd>int[] arr = {1, 2, 3, 4};</kbd>. This method fills in the array with the values passed in the bracket. We don't need to give the array a length because it is already implied by the number of elements being passed. If you already know what elements are going to be in your array, then this is the quickest and most convenient way to fill it in. 
+				</p>
+				<p>
+					If we are creating the array the first way, that means we are creating an array with default values. When any variable is declared but not initialized in a method, Java gives it a default value. For integers and doubles, that value is 0 and 0.0, for booleans it is False, for Strings and characters, the values are empty Strings and characters. So, in our first array, all we have is <i>n</i> zeroes. N being the length of our array. To give each position of the array a value, we can assign it like this (given that the arr is of an integer type): <kbd>arr[0] = 20;</kbd>. This initializes the first array spot (remember that Java counts from 0) to 20. We can keep going by doing <kbd>arr[1] = 20; arr[2] = 30; arr[3] = 5000; ...</kbd> up until length - 1. The reason for this is because Java counts starting at 0. If we have n elements, that means our last element will be at the index of n-1. 
+				</p>
+				<p>
+					Now that we have the indexes of our array initialized, let's experiment with some stuff. Let's say we want the value of the array at index 3. Put that value into an integer variable. <kbd>int val = arr[3];</kbd>. Now, let's try and change the value of the array at index 1 to 80. <kbd>arr[1] = 80;</kbd>. The value of the indexes can be changed, but the length of the array is immutable. 
+				</p>
+				<p>
+					The length attribute is a very important to remember. You can manipulate arrays very easily if you remember this one trick. <b>Array-Attribute</b>. What does this mean? Well, remember that for Strings, the length could be received by calling the length() function. For an array, however, the length is an attribute that was pre-determined by you. Instead of using parentheses, we can refer to an attribute by doing <kbd>arr.attribute</kbd>. In this case, it's <kbd>arr.length;</kbd>. This will return an integer. 
+				</p>
+                <p> 
+                    Let's make this simpler. Previously, for every index we manually inputted every value into each index. We can use a structure or more specifically, a loop, to make this more efficient. A while loop will do the trick, but a for loop will be far easier to understand. Start by typing <kbd>for(int i = 0; i < arr.length; i++){}</kbd>. Notice that our conditional is now different. We are running the for loop as long as i is less than the length of the array, which makes sense because we do not want to go outside the array. There are no values outside the array, so if we were to continue, we would receive an "IndexOutOfBounds Error". Now, let's set each array index to have a value of i. We can do this by typing <kbd>arr[i] = i;</kbd>. This means that the first index, 0, will have a value of 0. This will continue to the index of n-1. 
+                </p>
+                <p>
+                    What if we wanted to increase an integer/double array in increasing order? Normally, we would have to implement a sorting method and work with recursion, topics you'll learn later. But, recently a new method, <kbd>arr.sort()</kbd> was implemented into Java. This is <i>very</i> helpful since it only takes one line to sort an array, as opposed to typing out over 30 lines. 
+                </p>
+				 <div class="alert alert-info" role="alert">
+					<p>
+						<b>Challenge Problem</b>: Create an integer array with a length of 5. Make each index hold a multiple of 2, starting from 0. To do this, you need to change the incrementation in your for loop (the third parameter). Now, sort this array, print it out and see if you got a different result than you expected. Create a boolean array that alternates between False and True in its indeces. 
+						
+						
+					</p>
+				</div>
+				 <nav aria-label="...">
+				  <ul class="pager">
+					<li class="previous"><a href="dowhile.html"><span aria-hidden="true">&larr;</span> Next </a></li>
+					<li class="next"><a href="array.html">Back <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				</nav>
+			</div>
+			
+			
+			</div>
+			</div>
+		</div>	
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+	</body>
+
+</html>
+
